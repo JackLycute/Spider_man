@@ -26,10 +26,10 @@
 ![goods](https://github.com/JackLycute/Spider_man/blob/master/static/images/cart.png)
 
 ### 购物车
-![cart](https://github.com/JackLycute/Spider_man/blob/master/static/images/cart.png)
+![cart](https://github.com/JackLycute/Spider_man/blob/master/static/images/account.png)
 
 ### 支付
-![cart](https://github.com/JackLycute/Spider_man/blob/master/static/images/account.png)
+![cart](https://github.com/JackLycute/Spider_man/blob/master/static/images/pay.png)
 
 ## 安装：
 
