@@ -17,16 +17,19 @@
 
 ## 预览：
 ### 首页
-![index](https://github.com/JackLycute/Spider_man/blob/master/1.jpg)
+![index](https://github.com/JackLycute/Spider_man/blob/master/static/images/index.png)
 
 ### 登录
-![login](https://raw.githubusercontent.com/weilanhanf/Photos/master/DailyFresh/login.png)
+![login](https://github.com/JackLycute/Spider_man/blob/master/static/images/login.png)
 
 ### 商品详情
-![goods](https://raw.githubusercontent.com/weilanhanf/Photos/master/DailyFresh/goods.png)
+![goods](https://github.com/JackLycute/Spider_man/blob/master/static/images/cart.png)
 
 ### 购物车
-![cart](https://raw.githubusercontent.com/weilanhanf/Photos/master/DailyFresh/cart.png)
+![cart](https://github.com/JackLycute/Spider_man/blob/master/static/images/cart.png)
+
+### 支付
+![cart](https://github.com/JackLycute/Spider_man/blob/master/static/images/account.png)
 
 ## 安装：
 
