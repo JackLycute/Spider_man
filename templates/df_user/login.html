@@ -1,0 +1,135 @@
+{% extends 'base_foot.html' %}
+
+{% load static %}
+
+
+<!-- <script>
+    $(function () {
+        name_error = false;
+        pwd_error = false;
+
+         if({{ error_name }}==1){
+            $('.user_error').html('用户名错误').show();
+        }
+        if({{ error_pwd }}==1){
+            $('.pwd_error').html('密码错误').show();
+        }
+        $('.name_input').blur(function () {
+            if($('.name_input').val().length=0){
+                $('.user_error').html('请填写用户名').show();
+                name_error = false;
+            }else{
+                $('.user_error').hide();
+                name_error = true;
+            }
+        });
+        $('.pass_input').blur(function () {
+            if($('.pass_input').val().length=0){
+                $('.pwd_error').html('请输入密码').show();
+                pwd_error = false;
+            }else{
+                $('.pwd_error').hide();
+                pwd_error = true;
+            }
+        })
+    })
+</script> -->
+{% block head %}
+    <script>
+        $(function () {
+            name_error = false;
+            pwd_error = false;
+
+            if({{ error_name }}==1){
+                $('.user_error').html('用户名错误').show();
+            }
+            if({{ error_pwd }}==1){
+                $('.pwd_error').html('密码错误').show();
+            }
+            $('.user_name').blur(function () {
+                if($('.user_name').val().length=0){
+                    $('.user_error').html('请填写用户名').show();
+                    name_error = false;
+                }else{
+                    $('.user_error').hide();
+                    name_error = true;
+                }
+            });
+            $('.password').blur(function () {
+                if($('.password').val().length=0){
+                    $('.pwd_error').html('请输入密码').show();
+                    pwd_error = false;
+                }else{
+                    $('.pwd_error').hide();
+                    pwd_error = true;
+                }
+            })
+        })
+    </script>
+{% endblock%}
+
+{% block title %}
+    {{ title }} | 蜘蛛侠数据
+{% endblock %}
+
+{% block css %}
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
+    <link rel="stylesheet" href="/static/css1/reset.css">
+    <link rel="stylesheet" href="/static/css1/supersized.css">
+    <link rel="stylesheet" href="/static/css1/style.css">
+{% endblock %}
+
+{% block body %}
+     <div class="page-container">
+        <h1>Login</h1>
+            <div class="login">
+                <form action="{% url 'df_user:login_handle' %}" method="post">
+                    {% csrf_token %}
+                    <div class="form-line">
+                        <input type="text" name="username" class="user_name" value="{{ username }}" placeholder="Username">
+                        <div class="user_error">输入错误</div>
+                    </div>
+                    <div class="form-line">
+                        <input type="password" name="pwd" class="password" value="{{ password }}" placeholder="Password">  
+                        <div class="pwd_error">输入错误</div>
+                    </div>
+                    <div style="margin-left: -30px;">
+                        <div style="float:right;padding-top:28px;">
+                         <img  id="img" onclick="change(this)" src="/user/get_valid_img/" title="点击再换一张" alt="验证码图片">
+                        </div>
+                        <script>
+                            function change(ths) {
+                                ths.src += "?"
+                            }
+                        </script>
+                        <div style="float:">
+                            <input  style="width:120px;" id="valid-inp" name="validcode" class="form-control" type="text" placeholder="请输入验证码" autocomplete="off">
+                        </div>
+
+                    </div>
+
+                    <div class="form-line">
+                        <input class="remember" name="remember" type="checkbox" style="float:left"><p style="float:left;padding-top:25px">记住密码<p>
+                        <a href="#" style="float:right;padding-top:25px;color:white;text-decoration:none;">忘记密码?</a>
+                    </div>
+                    <div class="form-line">
+                        <button type="submit">登录</button>   
+                    </div>
+                </form>
+            </div>      
+            <div class="connect">
+                <p style="padding-right:50px;">Go to:<a href='{% url "df_user:register" %}' style="color:white;text-decoration:none;">Register</a></p>
+                <p>
+                    <a class="facebook" href=""></a>
+                    <a class="twitter" href=""></a>
+                </p>
+            </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="/static/js1/jquery-1.8.2.min.js"></script>
+    <script src="/static/js1/supersized.3.2.7.min.js"></script>
+    <script src="/static/js1/supersized-init.js"></script>
+    <script src="/static/js1/scripts.js"></script>
+{% endblock %}

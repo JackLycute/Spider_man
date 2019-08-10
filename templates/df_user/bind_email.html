@@ -1,0 +1,13 @@
+{% extends 'form.html' %}
+
+{% block center_body %}
+    <button id="send_code" class="btn btn-primary">发送验证码</button>
+    <script type="text/javascript">
+        $("#send_code").click(function(){
+            var email = $("#id_email").val();
+            if(email==""){
+                $("#tip")
+            }
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}个人资料{% endblock %}
+{% block center_body %}
+    <div class="main_con clearfix">
+		<div class="left_menu_con clearfix">
+			<h3>个人中心</h3>
+            {% if request.session.user_name|default:'' != '' %}
+                <h2>{{ user.username }}</h2>
+                <ul>
+                    <li>昵称：<a href="{% url 'df_user:change_nickname' %}">修改昵称</a></li>
+                    <li>邮箱：{% if user.email %}{{ user.email }}{% else %}未绑定<a href="#">绑定邮箱</a>{% endif %}</li>
+                    <li>上一次登录的时间：{{ user.last_login|date:"Y-m-d H:i:s" }}</li>
+                    <li><a href="#">修改密码</a></li>
+                </ul>
+            {% else %}
+                <span>未登录,跳转到首页...</span>
+                <script type="text/javascript">
+                    window.location.href = '/';
+                </script>
+            {% endif %}
+		</div>
+    </div>
+
+{% endblock %}

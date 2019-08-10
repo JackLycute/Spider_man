@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block center_body %}
+
+    <div class="navbar_con">
+		<div class="navbar clearfix">
+			<div class="subnav_con fl">
+				<h1>数据产品分类</h1>
+				<span></span>
+				<ul class="subnav">
+					<li><a href="/list1_1_1" class="fruit">企业管理</a></li>
+					<li><a href="/list2_1_1" class="seafood">电商数据</a></li>
+					<li><a href="/list3_1_1/" class="meet">数据金融</a></li>
+					<li><a href="/list4_1_1/" class="egg">人工智能</a></li>
+					<li><a href="/list5_1_1/" class="vegetables">生活消费</a></li>
+					<li><a href="/list6_1_1/" class="ice">媒体社交</a></li>
+				</ul>
+			</div>
+			<ul class="navlist fl">
+				<li><a href="{% url "df_goods:index" %}">首页</a></li>
+				<li class="interval">&nbsp;</li>
+				<li><a href="/list1_1_1/">数据商城</a></li>
+				<li class="interval">&nbsp;</li>
+				<li><a href="/list2_1_1/">爬虫市场</a></li>
+				<li class="interval">&nbsp;</li>
+				<li><a href="/list3_1_1/">需求大厅</a></li>
+				<li class="interval">&nbsp;</li>
+				<li><a href="/list4_1_1/">API市场</a></li>
+				<li class="interval"></li>
+				<li><a href="/list5_1_1/">数据服务商</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="breadcrumb">
+		{% if id|default:' ' != ' ' %}
+		{% endif %}
+	</div>
+
+{% block center_content %}
+
+{% endblock center_content %}
+
+
+
+{% endblock center_body %}
