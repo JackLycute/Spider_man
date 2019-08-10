@@ -17,7 +17,7 @@
 
 ## 预览：
 ### 首页
-![index](https://raw.githubusercontent.com/weilanhanf/Photos/master/DailyFresh/index.png)
+![index](https://github.com/JackLycute/Spider_man/blob/master/1.jpg)
 
 ### 登录
 ![login](https://raw.githubusercontent.com/weilanhanf/Photos/master/DailyFresh/login.png)
