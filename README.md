@@ -1,6 +1,6 @@
-## DailyFresh
+## Spider_man
 
-**天天生鲜**：小型电商购物网站，基于<code>Python3.5</code>和<code>Django2.0</code>
+**蜘蛛侠数据商城**：小型电商购物网站，基于<code>Python3.5</code>和<code>Django2.0</code>
 
 项目尽量使用Django内部提供的API，后台管理为Django自带的管理系统django-admin。适合接触Django不久之后，作为第一个实战小项目。
 
